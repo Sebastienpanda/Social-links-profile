@@ -1,0 +1,122 @@
+:root {
+    --color-green: oklch(0.911 0.216 123.791);
+    --color-white: oklch(1 0 89.876);
+    --color-grey-700: oklch(0.321 0 89.876);
+    --color-grey-800: oklch(0.239 0 89.876);
+    --color-grey-900: oklch(0.191 0 89.876);
+
+    --spacing-500: 2.5rem;  /* 40px */
+    --spacing-300: 1.5rem;  /* 24px */
+    --spacing-200: 1rem;   /* 16px */
+    --spacing-150: 0.75rem; /* 12px */
+    --spacing-100: 0.5rem; /* 8px */
+    --spacing-50: 0.25rem;  /* 4px */
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, html, body {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--color-grey-900);
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img, svg {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: var(--color-white);
+    line-height: 150%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.card {
+    background-color: var(--color-grey-800);
+    border-radius: 0.75rem; /* 12px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: var(--spacing-300);
+}
+
+.card .img {
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 88px;
+    width: 88px;
+    height: 88px;
+    max-height: 88px;
+    margin-bottom: var(--spacing-300);
+}
+
+.card .content .head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-50);
+}
+
+.card .content .head h1 {
+    font-size: 1.5rem;
+}
+
+.card .content .baseline {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.card .tagline {
+    font-size: 0.875rem;
+    margin-top: var(--spacing-300);
+}
+
+.card .links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    margin-top: var(--spacing-300);
+}
+
+.card .links .link {
+    background-color: var(--color-grey-700);
+    padding: var(--spacing-150);
+    color: var(--color-white);
+    border-radius: 0.5rem; /* 8px */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.card .links .link:hover {
+    background-color: var(--color-green);
+    color: var(--color-grey-700);
+}
